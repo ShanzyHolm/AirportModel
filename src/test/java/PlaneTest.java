@@ -12,5 +12,6 @@ public class PlaneTest {
 
     @Test
     public void canGetTypeOfPlane() {
+
     }
 }

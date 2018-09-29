@@ -1,4 +1,5 @@
 Airport
+
 Your task is to model a system for your favourite airport to manage its flights. You should use the tools you have learnt this week where appropriate and useful.
 
 As there are different ways to model this, take some time before you start to plan this out to avoid ending up in a muddle. Remember to TDD!
@@ -7,7 +8,7 @@ MVP
 Each plane should have:
 
 --a type (e.g. BOEING747) which stores the passenger capacity (HINT: ENUM!?)
-an airline
+--an airline
 --a collection of passengers
 
 Every flight should have:
