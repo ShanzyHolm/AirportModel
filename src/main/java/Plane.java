@@ -22,5 +22,15 @@ public class Plane {
         return this.planeType.getAirline();
     }
 
+    public int passengerCount() {
+        return this.passengerManifest.size();
+    }
 
+    public void addPassenger(Passenger passenger) {
+        this.passengerManifest.add(passenger);
+    }
+
+    public void emptyPlane() {
+        this.passengerManifest.clear();
+    }
 }
