@@ -5,7 +5,7 @@ public class Passenger {
         this.passengerName = passengerName;
     }
 
-    public String getPassengerName() {
-        return passengerName;
+    public String getName() {
+        return this.passengerName;
     }
 }

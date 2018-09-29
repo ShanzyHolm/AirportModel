@@ -1,8 +1,13 @@
+import java.util.ArrayList;
+
 public class Plane {
     private PlaneType planeType;
+    private ArrayList<Passenger> passengerManifest;
+
 
     public Plane(PlaneType planeType){
         this.planeType = planeType;
+        this.passengerManifest = new ArrayList<>();
     }
 
     public PlaneType getPlaneType() {
@@ -16,4 +21,6 @@ public class Plane {
     public String getAirline() {
         return this.planeType.getAirline();
     }
+
+
 }
