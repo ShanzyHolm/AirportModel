@@ -1,5 +1,6 @@
 public enum Airports {
     GLASGOW("Glasgow International Airport", "GLA", "Scotland"),
+    EDINBURGH("Edinburgh Airport", "EDI", "Scotland"),
     VANCOUVER("Vancouver International Airport","YVR", "Canada"),
     MALAGA("Costa Del Sol", "AGP", "Spain"),
     LONDONH("London Heathrow", "LHR", "England"),
@@ -20,21 +21,25 @@ public enum Airports {
     GOTENBURG("Landvetter Airport", "GSE", "Sweden"),
     TORONTO("Lester B Pearson International Airport", "YYZ", "Canada");
 
-    private final String name;
+    private final String airportName;
     private final String code;
-    private final String country;
+    private final String countryOfOrigin;
 
-    Airports(String name, String code, String country){
-        this.name = name;
+    Airports(String airportName, String code, String countryOfOrigin){
+        this.airportName = airportName;
         this.code = code;
-        this.country = country;
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
+    public String getName() {
+        return this.airportName;
     }
 
     public String getAirportCode(){
         return this.code;
     }
 
-    public String getCountry(){
-        return this.country;
+    public String getCountryOfOrigin(){
+        return this.countryOfOrigin;
     }
 }

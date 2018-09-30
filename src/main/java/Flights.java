@@ -1,30 +1,30 @@
 public enum Flights {
-    GLASGOW("KL1472", "Glasgow", "Edinburgh"),
-    VANCOUVER("AF8332", "Glasgow", "Vancouver"),
-    MALAGA("FR2609", "Malaga", "Glasgow"),
-    LONDONH("BA1487", "Glasgow", "London"),
-    LONDONG("EZY811", "London", "Edinburgh"),
-    AMSTERDAM("KL1476", "Amsterdam", "Glasgow"),
-    TENERIFE("LS155", "Tenerife", "Glasgow"),
-    TENERIFERS("FR6622", "Tenerife", "Edinburgh"),
-    DUBAI("EK028", "Dubai", "Glasgow"),
-    FRANKFURT("LH964", "Edinburgh", "Frankfurt"),
-    PARIS("AF1886", "Paris", "Edinburgh"),
-    NEWYORK("AA278", "New York", "Edinburgh"),
-    TOKYO("JL407", "Tokyo", "Edinburgh"),
-    MOSCOW("BA1493", "Glasgow", "Moscow"),
-    HALIFAX("WS30", "Glasgow", "Halifax"),
-    KEFLAVIK("FI431", "Reykjavik", "Glasgow"),
-    SYDNEY("QR32", "Sydney", "Edinburgh"),
-    DURBAN("BA1449", "Durban", "Edinburgh"),
-    GOTENBURG("KL1478", "Glasgow", "Gothenburg"),
-    TORONTO("TS525", "Glasgow", "Toronto");
+    GLASGOW("KL1472", Airports.GLASGOW, Airports.EDINBURGH),
+    VANCOUVER("AF8332", Airports.GLASGOW, Airports.VANCOUVER),
+    MALAGA("FR2609", Airports.MALAGA, Airports.GLASGOW),
+    LONDONH("BA1487", Airports.GLASGOW, Airports.LONDONH),
+    LONDONG("EZY811", Airports.LONDONG, Airports.EDINBURGH),
+    AMSTERDAM("KL1476", Airports.AMSTERDAM, Airports.GLASGOW),
+    TENERIFE("LS155", Airports.TENERIFE, Airports.GLASGOW),
+    TENERIFERS("FR6622", Airports.TENERIFERS, Airports.EDINBURGH),
+    DUBAI("EK028", Airports.DUBAI, Airports.GLASGOW),
+    FRANKFURT("LH964", Airports.EDINBURGH, Airports.FRANKFURT),
+    PARIS("AF1886", Airports.PARIS, Airports.EDINBURGH),
+    NEWYORK("AA278", Airports.NEWYORK, Airports.EDINBURGH),
+    TOKYO("JL407", Airports.TOKYO, Airports.EDINBURGH),
+    MOSCOW("BA1493", Airports.GLASGOW, Airports.MOSCOW),
+    HALIFAX("WS30", Airports.GLASGOW, Airports.HALIFAX),
+    KEFLAVIK("FI431", Airports.KEFLAVIK, Airports.EDINBURGH),
+    SYDNEY("QR32", Airports.SYDNEY, Airports.GLASGOW),
+    DURBAN("BA1449", Airports.DURBAN, Airports.GLASGOW),
+    GOTENBURG("KL1478", Airports.EDINBURGH, Airports.GOTENBURG),
+    TORONTO("TS525", Airports.GLASGOW, Airports.TORONTO);
 
     private final String flightNumber;
-    private final String departureDestination;
-    private final String arrivalDestination;
+    private final Enum departureDestination;
+    private final Enum arrivalDestination;
 
-    Flights(String flightNumber, String departureDestination, String arrivalDestination){
+    Flights(String flightNumber, Enum departureDestination, Enum arrivalDestination){
         this.flightNumber = flightNumber;
         this.departureDestination = departureDestination;
         this.arrivalDestination = arrivalDestination;
@@ -34,11 +34,11 @@ public enum Flights {
         return flightNumber;
     }
 
-    public String getDepartureDestination() {
+    public Enum getDepartureDestination() {
         return departureDestination;
     }
 
-    public String getArrivalDestination() {
+    public Enum getArrivalDestination() {
         return arrivalDestination;
     }
 }

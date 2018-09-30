@@ -20,11 +20,11 @@ public class Flight {
         return this.flights.getFlightNumber();
     }
 
-    public String getDepartureDestination() {
+    public Enum getDepartureDestination() {
         return this.flights.getDepartureDestination();
     }
 
-    public String getArrivalDestination() {
+    public Enum getArrivalDestination() {
         return this.flights.getArrivalDestination();
     }
 }

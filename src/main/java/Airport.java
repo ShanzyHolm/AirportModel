@@ -1,21 +1,20 @@
 import java.util.ArrayList;
 
 public class Airport {
-    private String airportName;
+    private Airports airports;
     private ArrayList<Hangar> hangars;
     private ArrayList<Flight> flights;
-    private String airportCode;
 
-    public Airport(String airportCode){
-        this.airportCode = airportCode;
-        this.airportName = airportName;
+
+    public Airport(Airports airports){
+        this.airports = airports;
     }
 
     public String getAirportName() {
-        return airportName;
+        return this.airports.getName();
     }
 
     public String getAirportCode() {
-        return airportCode;
+        return this.airports.getAirportCode();
     }
 }

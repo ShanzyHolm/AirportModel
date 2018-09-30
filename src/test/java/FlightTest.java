@@ -38,11 +38,11 @@ public class FlightTest {
 
     @Test
     public void canGetDepartureDestination() {
-        assertEquals( "Reykjavik", flight3.getDepartureDestination());
+        assertEquals( Airports.KEFLAVIK, flight3.getDepartureDestination());
     }
 
     @Test
     public void canGetArrivalDestination() {
-        assertEquals("Edinburgh", flight4.getArrivalDestination());
+        assertEquals(Airports.EDINBURGH, flight4.getArrivalDestination());
     }
 }

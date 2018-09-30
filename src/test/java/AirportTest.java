@@ -2,15 +2,25 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class AirportTest {
-    Airport airport;
+    Airport airport1;
+    Airport airport2;
+    Airport airport3;
+    Airport airport4;
 
 
     @Before
     public void before() {
-        airport = new Airport("YYZ");
+        airport1 = new Airport(Airports.AMSTERDAM);
+        airport2 = new Airport(Airports.FRANKFURT);
+        airport3 = new Airport(Airports.KEFLAVIK);
+        airport4 = new Airport(Airports.HALIFAX);
     }
 
     @Test
-    public void canGetAirportName() {
+    public void getAirportName() {
+    }
+
+    @Test
+    public void getAirportCode() {
     }
 }
