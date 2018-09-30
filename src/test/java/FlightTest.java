@@ -38,7 +38,7 @@ public class FlightTest {
 
     @Test
     public void canGetDepartureDestination() {
-        assertEquals( Airports.KEFLAVIK, flight3.getDepartureDestination());
+        assertEquals(Airports.KEFLAVIK, flight3.getDepartureDestination());
     }
 
     @Test
