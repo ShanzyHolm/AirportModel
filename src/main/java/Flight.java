@@ -27,4 +27,5 @@ public class Flight {
     public Enum getArrivalDestination() {
         return this.flights.getArrivalDestination();
     }
+
 }
