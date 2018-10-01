@@ -17,6 +17,7 @@ public class AirportTest {
     private Hangar mediumHangar;
     private Hangar littleHangar;
     private Plane plane1;
+    private Plane plane2;
     private Flight flight1;
     private Flight flight2;
 
@@ -26,7 +27,7 @@ public class AirportTest {
     public void before() {
         bigHangar = new Hangar("One", 10);
         mediumHangar = new Hangar("Three", 6);
-        littleHangar = new Hangar("Two", 2);
+        littleHangar = new Hangar("Two", 1);
         flight1 = new Flight(PlaneType.RJ85AVROLINER, Flights.MOSCOW);
         flight2 = new Flight(PlaneType.BOEING767, Flights.TOKYO);
         airport1 = new Airport(Airports.AMSTERDAM);
@@ -37,6 +38,7 @@ public class AirportTest {
         airport6 = new Airport(Airports.LONDONG);
         airport7 = new Airport(Airports.LONDONH);
         plane1 = new Plane(PlaneType.AIRBUSA320);
+        plane2 = new Plane(PlaneType.BOEING737W);
     }
 
     @Test
@@ -67,7 +69,7 @@ public class AirportTest {
 
     @Test
     public void canGetHangarCapacity() {
-        assertEquals(2, littleHangar.getPlaneCapacity());
+        assertEquals(1, littleHangar.getPlaneCapacity());
     }
 
     @Test
@@ -81,8 +83,9 @@ public class AirportTest {
     }
 
     @Test
-    public void canAddPlaneToHangar() {
+    public void canAddPlaneToHangarIfSpace() {
         littleHangar.addPlane(plane1);
+        littleHangar.addPlane(plane2);
         assertEquals(1, littleHangar.getPlaneCount());
     }
 
@@ -97,18 +100,20 @@ public class AirportTest {
         assertEquals(1, airport6.flightCount());
     }
 //
-//    @Test
-//    public void canAssignPlaneFromHangarToFlight() {
-//        ArrayList<Hangar> hangarsList = new ArrayList<Hangar>();
-//        hangarsList.add(mediumHangar);
-//
-//
-//        airport7.addFlight(flight2);
-//
+    @Test
+    public void canAssignPlaneFromHangarToFlight() {
+        airport7.addHangar(mediumHangar);
+        assertEquals(1, airport7.hangarCount());
+        mediumHangar.addPlane(plane2);
+        assertEquals(1, mediumHangar.getPlaneCount());
+
+        airport7.addFlight(flight2);
+        assertEquals(1, airport7.flightCount());
+
 //        airport7.assignPlaneFromHangarToFlight(hangarsList, flight2.getFlight());
 //        assertEquals("JL407", flight2.getFlightNumber());
-//    }
-//
+    }
+
 //    @Test
 //    public void cannotAssignPlaneToFlightAsNotInHangar() {
 //    }
