@@ -102,16 +102,21 @@ public class AirportTest {
 //
     @Test
     public void canAssignPlaneFromHangarToFlight() {
+        //Airport needs a hangar
         airport7.addHangar(mediumHangar);
         assertEquals(1, airport7.hangarCount());
+
+        //Airport hangar needs a plane
         mediumHangar.addPlane(plane2);
         assertEquals(1, mediumHangar.getPlaneCount());
 
+        // Airport needs a flight on the flightSchedule
         airport7.addFlight(flight2);
         assertEquals(1, airport7.flightCount());
 
-//        airport7.assignPlaneFromHangarToFlight(hangarsList, flight2.getFlight());
-//        assertEquals("JL407", flight2.getFlightNumber());
+        //Airport needs to assign plane to flight
+        airport7.assignPlaneFromHangarToFlight();
+//        assertEquals();
     }
 
 //    @Test

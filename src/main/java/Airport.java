@@ -40,11 +40,11 @@ public class Airport {
         this.flightSchedule.add(flight);
     }
 
-//    public void assignPlaneFromHangarToFlight(ArrayList<Hangar> hangarsList, Flight flight) {
-//        for (Flight flightLog : this.flightSchedule){
-//            if (flightLog.getFlight() == flight) {
-//                for
-//            }
-//        }
-//    }
+    public void assignPlaneFromHangarToFlight(){
+//    For airport >
+//      if airport has hangar >
+//        if hangar has plane >
+//          if airport has flight >
+//              add plane to flight
+    }
 }
