@@ -33,4 +33,15 @@ public class Hangar {
         }
     }
 
+    public Plane getPlane(Plane planeType){
+        Plane planeFound = null;
+        for (Plane plane : this.planes) {
+            if (plane.getPlaneType().equals(planeType)){
+                planeFound = this.planes.remove(this.planes.indexOf(plane));
+                break;
+            }
+        }
+        return planeFound;
+    }
+
 }

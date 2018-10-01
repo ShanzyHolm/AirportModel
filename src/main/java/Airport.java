@@ -40,12 +40,18 @@ public class Airport {
         this.flightSchedule.add(flight);
     }
 
-    public void assignPlaneFromHangarToFlight(Hangar hangar, Plane plane, Flight flight){
+    public void assignPlaneFromHangarToFlight(){
 //    For airport >
 //      if airport has hangar >
 //        if hangar has plane >
 //          if airport has flight >
 //              add plane to flight
+
+//        Plane foundPlane = null;
+//        for (Plane plane = this.planes) {
+//            if (plane.)
+
+//        }
     }
 
 //    public void sellTicketsForFlight(){
