@@ -115,11 +115,16 @@ public class AirportTest {
         assertEquals(1, airport7.flightCount());
 
         //Airport needs to assign plane to flight
-        airport7.assignPlaneFromHangarToFlight();
+//        airport7.assignPlaneFromHangarToFlight();
 //        assertEquals();
     }
 
 //    @Test
 //    public void cannotAssignPlaneToFlightAsNotInHangar() {
+//    }
+
+//    @Test
+//    public void airportCanSellTicketsForFights() {
+//        assertEquals();
 //    }
 }
